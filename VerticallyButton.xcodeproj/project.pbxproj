@@ -13,6 +13,7 @@
 		A5975CD51E535D1B00194BE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5975CD41E535D1B00194BE5 /* Assets.xcassets */; };
 		A5975CD81E535D1B00194BE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5975CD61E535D1B00194BE5 /* LaunchScreen.storyboard */; };
 		A5975CE31E535D1B00194BE5 /* VerticallyButtonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5975CE21E535D1B00194BE5 /* VerticallyButtonTests.swift */; };
+		A5975CEE1E535D4D00194BE5 /* VerticallyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5975CED1E535D4D00194BE5 /* VerticallyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		A5975CDE1E535D1B00194BE5 /* VerticallyButtonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VerticallyButtonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5975CE21E535D1B00194BE5 /* VerticallyButtonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticallyButtonTests.swift; sourceTree = "<group>"; };
 		A5975CE41E535D1B00194BE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5975CED1E535D4D00194BE5 /* VerticallyButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticallyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				A5975CCD1E535D1B00194BE5 /* AppDelegate.swift */,
 				A5975CCF1E535D1B00194BE5 /* ViewController.swift */,
+				A5975CED1E535D4D00194BE5 /* VerticallyButton.swift */,
 				A5975CD11E535D1B00194BE5 /* Main.storyboard */,
 				A5975CD41E535D1B00194BE5 /* Assets.xcassets */,
 				A5975CD61E535D1B00194BE5 /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 			files = (
 				A5975CD01E535D1B00194BE5 /* ViewController.swift in Sources */,
 				A5975CCE1E535D1B00194BE5 /* AppDelegate.swift in Sources */,
+				A5975CEE1E535D4D00194BE5 /* VerticallyButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
