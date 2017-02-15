@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A5975CCE1E535D1B00194BE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5975CCD1E535D1B00194BE5 /* AppDelegate.swift */; };
-		A5975CD01E535D1B00194BE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5975CCF1E535D1B00194BE5 /* ViewController.swift */; };
 		A5975CD31E535D1B00194BE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5975CD11E535D1B00194BE5 /* Main.storyboard */; };
 		A5975CD51E535D1B00194BE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5975CD41E535D1B00194BE5 /* Assets.xcassets */; };
 		A5975CD81E535D1B00194BE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5975CD61E535D1B00194BE5 /* LaunchScreen.storyboard */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		A5975CCA1E535D1B00194BE5 /* VerticallyButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VerticallyButton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5975CCD1E535D1B00194BE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A5975CCF1E535D1B00194BE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A5975CD21E535D1B00194BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A5975CD41E535D1B00194BE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5975CD71E535D1B00194BE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				A5975CCD1E535D1B00194BE5 /* AppDelegate.swift */,
-				A5975CCF1E535D1B00194BE5 /* ViewController.swift */,
 				A5975CED1E535D4D00194BE5 /* VerticallyButton.swift */,
 				A5975CD11E535D1B00194BE5 /* Main.storyboard */,
 				A5975CD41E535D1B00194BE5 /* Assets.xcassets */,
@@ -204,7 +201,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5975CD01E535D1B00194BE5 /* ViewController.swift in Sources */,
 				A5975CCE1E535D1B00194BE5 /* AppDelegate.swift in Sources */,
 				A5975CEE1E535D4D00194BE5 /* VerticallyButton.swift in Sources */,
 			);
@@ -416,6 +412,7 @@
 				A5975CE91E535D1B00194BE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A5975CEA1E535D1B00194BE5 /* Build configuration list for PBXNativeTarget "VerticallyButtonTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +421,7 @@
 				A5975CEC1E535D1B00194BE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
