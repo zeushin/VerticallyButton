@@ -1,0 +1,6 @@
+framework module VerticallyButton {
+  umbrella header "VerticallyButton-umbrella.h"
+
+  export *
+  module * { export * }
+}
