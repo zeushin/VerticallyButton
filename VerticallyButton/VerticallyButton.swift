@@ -13,39 +13,76 @@ class VerticallyButton: UIButton {
     @IBInspectable
     var verticallyAlign: Bool = false {
         didSet {
-            configureVertically()
+            setNeedsDisplay()
         }
     }
     
     @IBInspectable
     var verticallySpacing: CGFloat = 0 {
         didSet {
-            configureVertically()
+            setNeedsDisplay()
         }
     }
     
     @IBInspectable
     var verticallyPoint: CGPoint = CGPoint(x: 0, y: 0) {
         didSet {
-            configureVertically()
+            setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable
+    var secondaryImage: UIImage? {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable
+    var secondaryHighlightedImage: UIImage? {
+        didSet {
+            setNeedsDisplay()
         }
     }
     
     private func configureVertically() {
-        let imageSize = imageView?.frame.size ?? CGSize(width: 0, height: 0)
+        guard verticallyAlign else { return }
         
-        titleEdgeInsets = UIEdgeInsets(top: 0 - verticallyPoint.y,
-                                       left: -imageSize.width - verticallyPoint.x,
-                                       bottom: -(imageSize.height + verticallySpacing) + verticallyPoint.y,
-                                       right: 0 + verticallyPoint.x)
+        if let secondaryImage = isHighlighted ? secondaryHighlightedImage : secondaryImage {
+            let secondaryImageSize = secondaryImage.size
+            
+            imageEdgeInsets = UIEdgeInsets(top: -(secondaryImageSize.height + verticallySpacing) - verticallyPoint.y,
+                                           left: -verticallyPoint.x,
+                                           bottom: verticallySpacing + verticallyPoint.y,
+                                           right: verticallyPoint.x)
+            
+            secondaryImage.draw(at: CGPoint(x: bounds.width / 2 - secondaryImageSize.width / 2 + verticallyPoint.x,
+                                            y: bounds.height / 2 + verticallySpacing + verticallyPoint.y))
+            
+        } else {
+            let imageSize = imageView?.frame.size ?? CGSize(width: 0, height: 0)
+            
+            let titleSize = titleLabel?.frame.size ?? CGSize(width: 0, height: 0)
+            
+            imageEdgeInsets = UIEdgeInsets(top: -(titleSize.height + verticallySpacing) - verticallyPoint.y,
+                                           left: 0 - verticallyPoint.x,
+                                           bottom: verticallySpacing + verticallyPoint.y,
+                                           right: -titleSize.width + verticallyPoint.x)
         
-        let titleSize = titleLabel?.frame.size ?? CGSize(width: 0, height: 0)
-        
-        imageEdgeInsets = UIEdgeInsets(top: -(titleSize.height + verticallySpacing) - verticallyPoint.y,
-                                       left: 0 - verticallyPoint.x,
-                                       bottom: 0 + verticallyPoint.y,
-                                       right: -titleSize.width + verticallyPoint.x)
-        
+            titleEdgeInsets = UIEdgeInsets(top: 0 - verticallyPoint.y,
+                                           left: -imageSize.width - verticallyPoint.x,
+                                           bottom: -(imageSize.height + verticallySpacing) + verticallyPoint.y,
+                                           right: 0 + verticallyPoint.x)
+        }
+    }
+    
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        configureVertically()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
         setNeedsDisplay()
     }
 }
