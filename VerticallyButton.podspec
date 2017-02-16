@@ -21,8 +21,8 @@ Pod::Spec.new do |s|
 UIButton that have vertically aligned components.
                        DESC
 
-  s.homepage         = 'https://github.com/Masher Shin/VerticallyButton'
-  s.screenshots     = 'https://github.com/zeushin/VerticallyButton/blob/master/Screenshots/VerticallyButton.png', 'https://github.com/zeushin/VerticallyButton/blob/master/Screenshots/VerticallyButton.gif'
+  s.homepage         = 'https://github.com/zeushin/VerticallyButton'
+  s.screenshots      = 'https://raw.githubusercontent.com/zeushin/VerticallyButton/master/Screenshots/VerticallyButton.png', 'https://raw.githubusercontent.com/zeushin/VerticallyButton/master/Screenshots/VerticallyButton.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Masher Shin' => 'zeushin@gmail.com' }
   s.source           = { :git => 'https://github.com/Masher Shin/VerticallyButton.git', :tag => s.version.to_s }
