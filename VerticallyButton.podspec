@@ -25,8 +25,8 @@ UIButton that have vertically aligned components.
   s.screenshots      = 'https://raw.githubusercontent.com/zeushin/VerticallyButton/master/Screenshots/VerticallyButton.png', 'https://raw.githubusercontent.com/zeushin/VerticallyButton/master/Screenshots/VerticallyButton.gif'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Masher Shin' => 'zeushin@gmail.com' }
-  s.source           = { :git => 'https://github.com/Masher Shin/VerticallyButton.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/masher_s'
+  s.source           = { :git => 'https://github.com/zeushin/VerticallyButton.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/masher_s'
 
   s.ios.deployment_target = '8.0'
 
