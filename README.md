@@ -1,6 +1,6 @@
 # VerticallyButton
 
-[![CI Status](http://img.shields.io/travis/Masher Shin/VerticallyButton.svg?style=flat)](https://travis-ci.org/Masher Shin/VerticallyButton)
+[![CI Status](http://img.shields.io/travis/zeushin/VerticallyButton.svg?style=flat)](https://travis-ci.org/zeushin/VerticallyButton)
 [![Version](https://img.shields.io/cocoapods/v/VerticallyButton.svg?style=flat)](http://cocoapods.org/pods/VerticallyButton)
 [![License](https://img.shields.io/cocoapods/l/VerticallyButton.svg?style=flat)](http://cocoapods.org/pods/VerticallyButton)
 [![Platform](https://img.shields.io/cocoapods/p/VerticallyButton.svg?style=flat)](http://cocoapods.org/pods/VerticallyButton)
