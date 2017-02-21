@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class VerticallyButton: UIButton {
+open class VerticallyButton: UIButton {
     @IBInspectable
     var verticallyAlign: Bool = false {
         didSet {
@@ -76,12 +76,12 @@ class VerticallyButton: UIButton {
         }
     }
     
-    override func draw(_ rect: CGRect) {
+    override open func draw(_ rect: CGRect) {
         super.draw(rect)
         configureVertically()
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         setNeedsDisplay()
     }
