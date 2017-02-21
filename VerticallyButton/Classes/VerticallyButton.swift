@@ -11,35 +11,35 @@ import UIKit
 @IBDesignable
 open class VerticallyButton: UIButton {
     @IBInspectable
-    var verticallyAlign: Bool = false {
+    open var verticallyAlign: Bool = false {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var verticallySpacing: CGFloat = 0 {
+    open var verticallySpacing: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var verticallyPoint: CGPoint = CGPoint(x: 0, y: 0) {
+    open var verticallyPoint: CGPoint = CGPoint(x: 0, y: 0) {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var secondaryImage: UIImage? {
+    open var secondaryImage: UIImage? {
         didSet {
             setNeedsDisplay()
         }
     }
     
     @IBInspectable
-    var secondaryHighlightedImage: UIImage? {
+    open var secondaryHighlightedImage: UIImage? {
         didSet {
             setNeedsDisplay()
         }
