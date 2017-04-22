@@ -14,6 +14,7 @@ open class VerticallyButton: UIButton {
     open var verticallyAlign: Bool = false {
         didSet {
             setNeedsDisplay()
+            invalidateIntrinsicContentSize()
         }
     }
     
@@ -21,6 +22,7 @@ open class VerticallyButton: UIButton {
     open var verticallySpacing: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
+            invalidateIntrinsicContentSize()
         }
     }
     
@@ -28,6 +30,7 @@ open class VerticallyButton: UIButton {
     open var verticallyPoint: CGPoint = CGPoint(x: 0, y: 0) {
         didSet {
             setNeedsDisplay()
+            invalidateIntrinsicContentSize()
         }
     }
     
@@ -35,6 +38,7 @@ open class VerticallyButton: UIButton {
     open var secondaryImage: UIImage? {
         didSet {
             setNeedsDisplay()
+            invalidateIntrinsicContentSize()
         }
     }
     
@@ -42,6 +46,7 @@ open class VerticallyButton: UIButton {
     open var secondaryHighlightedImage: UIImage? {
         didSet {
             setNeedsDisplay()
+            invalidateIntrinsicContentSize()
         }
     }
     
@@ -83,6 +88,13 @@ open class VerticallyButton: UIButton {
     
     override open func layoutSubviews() {
         super.layoutSubviews()
-        setNeedsDisplay()
+        invalidateIntrinsicContentSize()
+    }
+    
+    override open var intrinsicContentSize: CGSize {
+        let imageSize = imageView?.frame.size ?? CGSize(width: 0, height: 0)
+        let titleSize = titleLabel?.frame.size ?? CGSize(width: 0, height: 0)
+        return CGSize(width: max(imageSize.width, titleSize.width),
+                      height: imageSize.height + titleSize.height + verticallySpacing + 12) // 12 = top margin + bottom margin
     }
 }

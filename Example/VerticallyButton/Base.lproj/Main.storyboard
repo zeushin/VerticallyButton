@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -59,11 +59,25 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tF0-Jb-waF" customClass="VerticallyButton" customModule="VerticallyButton">
+                                <rect key="frame" x="135" y="52" width="50" height="87"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Button" image="apple"/>
+                                <state key="highlighted" image="apple-p"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="verticallyAlign" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="verticallySpacing">
+                                        <real key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="tF0-Jb-waF" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="M5G-8G-Nh6"/>
                             <constraint firstItem="4zO-Lj-CwI" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="QBV-oe-HMU"/>
                             <constraint firstItem="4zO-Lj-CwI" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="SCi-8i-yxA"/>
+                            <constraint firstItem="4zO-Lj-CwI" firstAttribute="top" secondItem="tF0-Jb-waF" secondAttribute="bottom" constant="16" id="gkQ-Xw-G9z"/>
                         </constraints>
                     </view>
                 </viewController>
