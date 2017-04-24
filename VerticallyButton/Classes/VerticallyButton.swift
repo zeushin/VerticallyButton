@@ -81,18 +81,16 @@ open class VerticallyButton: UIButton {
         }
     }
     
-    override open func draw(_ rect: CGRect) {
-        super.draw(rect)
-        configureVertically()
-    }
-    
     override open func layoutSubviews() {
-        super.layoutSubviews()
+        configureVertically()
         invalidateIntrinsicContentSize()
+        super.layoutSubviews()
     }
     
     override open var intrinsicContentSize: CGSize {
         let imageSize = imageView?.frame.size ?? CGSize(width: 0, height: 0)
+        // Fix: title not display normally in XIB
+        titleLabel?.sizeToFit()
         let titleSize = titleLabel?.frame.size ?? CGSize(width: 0, height: 0)
         return CGSize(width: max(imageSize.width, titleSize.width),
                       height: imageSize.height + titleSize.height + verticallySpacing + 12) // 12 = top margin + bottom margin
