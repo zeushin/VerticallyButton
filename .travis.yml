@@ -4,12 +4,11 @@
 
 osx_image: xcode8.2
 language: objective-c
-# cache: cocoapods
-# podfile: Example/Podfile
-# before_install:
-# - gem install cocoapods # Since Travis is not always on latest version
-# - pod install --project-directory=Example
+cache: cocoapods
+podfile: Example/Podfile
+before_install:
+- gem install cocoapods # Since Travis is not always on latest version
+- pod install --project-directory=Example
 script:
-- pod update
-- xcodebuild test -workspace Example/VerticallyButton.xcworkspace -scheme VerticallyButton-Example -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+- xcodebuild test -workspace Example/VerticallyButton.xcworkspace -scheme VerticallyButton-Example -destination 'platform=iOS Simulator,name=iPhone 7,OS=10.3' ONLY_ACTIVE_ARCH=NO
 - pod lib lint
