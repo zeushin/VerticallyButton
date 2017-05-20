@@ -14,7 +14,6 @@ open class VerticallyButton: UIButton {
     open var verticallyAlign: Bool = false {
         didSet {
             setNeedsDisplay()
-            invalidateIntrinsicContentSize()
         }
     }
     
@@ -22,7 +21,6 @@ open class VerticallyButton: UIButton {
     open var verticallySpacing: CGFloat = 0 {
         didSet {
             setNeedsDisplay()
-            invalidateIntrinsicContentSize()
         }
     }
     
@@ -30,7 +28,6 @@ open class VerticallyButton: UIButton {
     open var verticallyPoint: CGPoint = CGPoint(x: 0, y: 0) {
         didSet {
             setNeedsDisplay()
-            invalidateIntrinsicContentSize()
         }
     }
     
@@ -38,7 +35,6 @@ open class VerticallyButton: UIButton {
     open var secondaryImage: UIImage? {
         didSet {
             setNeedsDisplay()
-            invalidateIntrinsicContentSize()
         }
     }
     
@@ -46,7 +42,6 @@ open class VerticallyButton: UIButton {
     open var secondaryHighlightedImage: UIImage? {
         didSet {
             setNeedsDisplay()
-            invalidateIntrinsicContentSize()
         }
     }
     
@@ -71,9 +66,9 @@ open class VerticallyButton: UIButton {
             
             imageEdgeInsets = UIEdgeInsets(top: -(titleSize.height + verticallySpacing) - verticallyPoint.y,
                                            left: 0 - verticallyPoint.x,
-                                           bottom: verticallySpacing + verticallyPoint.y,
+                                           bottom: 0 + verticallyPoint.y,
                                            right: -titleSize.width + verticallyPoint.x)
-        
+            
             titleEdgeInsets = UIEdgeInsets(top: 0 - verticallyPoint.y,
                                            left: -imageSize.width - verticallyPoint.x,
                                            bottom: -(imageSize.height + verticallySpacing) + verticallyPoint.y,
@@ -81,10 +76,15 @@ open class VerticallyButton: UIButton {
         }
     }
     
-    override open func layoutSubviews() {
-        configureVertically()
+    override open func draw(_ rect: CGRect) {
         invalidateIntrinsicContentSize()
+        configureVertically()
+        super.draw(rect)
+    }
+    
+    override open func layoutSubviews() {
         super.layoutSubviews()
+        setNeedsDisplay()
     }
     
     override open var intrinsicContentSize: CGSize {
